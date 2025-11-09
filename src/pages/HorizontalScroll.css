@@ -1,0 +1,30 @@
+/* Make the body and html take up the full viewport and hide vertical overflow */
+html, body {
+  overflow-y: hidden;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* This is the main container for your horizontal pages */
+.horizontal-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100vw;
+  height: 1020px;
+  /* Custom scrollbar styling (optional but recommended) */
+  scrollbar-width: none; /* For Firefox */
+}
+
+.horizontal-scroll-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.horizontal-scroll-container > * {
+  flex-shrink: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto; /* Allow vertical scrolling within each page */
+}

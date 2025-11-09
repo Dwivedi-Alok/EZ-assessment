@@ -1,0 +1,24 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  
+  overflow-x: hidden; 
+}
+
+.horizontal-scroll-container {
+  display: flex;
+  width: 2200vw; 
+  height: 1020px;
+  /* overflow-y: hidden; */
+  /* overflow-x: scroll; */
+  scroll-snap-type: x mandatory;
+}
+
+.scroll-section {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  position: relative;
+}
